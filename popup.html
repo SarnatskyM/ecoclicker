@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoClicker</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Eco Clicker</h1>
+      <p>Каждый клик имеет значение!</p>
+    </header>
+
+    <main>
+      <div class="ad-banner">Ваша реклама здесь</div>
+      <section id="clickerSection" style="display: none">
+        <p class="description">
+          Кликайте по дереву, чтобы сажать виртуальные деревья и поддерживать
+          реальные экологические проекты!
+        </p>
+        <div class="tree-container">
+          <div class="score" id="scoreDisplay">Очки: 0</div>
+          <div class="tree" id="tree"></div>
+        </div>
+      </section>
+      <section id="newsSection">
+        <h2>Новости</h2>
+        <p>Следите за обновлениями наших экологических проектов.</p>
+      </section>
+      <section id="leaderboardSection" style="display: none">
+        <h2>Лидеров</h2>
+        <p>Соревнуйтесь с другими и узнайте, кто вносит наибольший вклад!</p>
+      </section>
+    </main>
+
+    <nav>
+      <button id="newsTab" class="active">Новости</button>
+      <button id="clickerTab">Кликер</button>
+      <button id="leaderboardTab">Лидеров</button>
+    </nav>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

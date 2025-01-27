@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0fdf4;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 400px;
+}
+
+header {
+  background-color: #16a34a;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+section {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.impact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: center;
+}
+
+.impact div {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.impact .trees {
+  background-color: #bbf7d0;
+}
+
+.impact .plastic {
+  background-color: #bfdbfe;
+}
+
+.ad-banner {
+  height: 100px;
+  background-color: #d1fae5;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #065f46;
+  font-weight: bold;
+}
+
+.tree-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: #bbf7d0;
+  border-radius: 12px;
+}
+
+.tree {
+  width: 100px;
+  height: 150px;
+  background: url("/images/tree.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #065f46;
+}
+
+.description {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.leaf {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("/images/leaf.png") no-repeat center;
+  background-size: contain;
+  animation: fall 2s linear;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(300px) rotate(360deg);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #16a34a;
+  padding: 8px;
+  border-radius: 12px 12px 0 0;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+nav button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
